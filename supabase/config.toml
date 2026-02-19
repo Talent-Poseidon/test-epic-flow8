@@ -1,0 +1,37 @@
+project_id = "test-project"
+
+[api]
+enabled = true
+port = 54321
+schemas = ["public", "storage", "graphql_public"]
+extra_search_path = ["public", "extensions"]
+max_rows = 1000
+
+[db]
+port = 54322
+shadow_port = 54320
+major_version = 15
+
+[studio]
+enabled = true
+port = 54323
+
+[auth]
+enabled = true
+
+[auth.email]
+enable_signup = true
+double_confirm_changes = true
+enable_confirmations = true
+
+[auth.email.smtp]
+host = "localhost"
+port = 2500
+user = "admin"
+pass = "password"
+admin_email = "admin@example.com"
+sender_name = "Admin"
+
+[auth.sms]
+enable_signup = false
+enable_confirmations = false
